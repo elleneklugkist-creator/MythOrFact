@@ -35,6 +35,25 @@ Life hacks and internet rumours are everywhere. This app helps users test their 
 
 ---
 
+## Screenshots
+
+### Welcome Screen
+![Welcome Screen](screenshots/image.png)
+
+### Quiz Screen – Question
+![Quiz Question](screenshots/Screenshot_20260424_201115.png)
+
+### Quiz Screen – Correct Answer
+![Correct Answer](screenshots/Screenshot_20260424_201221.png)
+
+### Quiz Screen – Wrong Answer
+![Wrong Answer](screenshots/Screenshot_20260424_201252.png)
+
+### Score Screen
+![Score Screen](screenshots/Screenshot_20260424_201320.png)
+
+---
+
 ## Design Considerations
 
 - **ConstraintLayout** is used for all screens to ensure the UI scales correctly across different screen sizes and orientations.
