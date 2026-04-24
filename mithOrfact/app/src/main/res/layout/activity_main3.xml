@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_quiz"
+    tools:context=".MainActivity3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Displays how many questions the user got correct -->
+        <TextView
+            android:id="@+id/txtFinalScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Your Score"
+            android:background="#CC01032E"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:fontFamily="serif"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Personalised feedback message based on the score (e.g. "Master Hacker!") -->
+        <TextView
+            android:id="@+id/txtFeedback"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Feedback"
+            android:background="#CC141A3C"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="18sp"
+            android:textColor="#FFD54F"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintTop_toBottomOf="@id/txtFinalScore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Button that reveals the full review list -->
+        <Button
+            android:id="@+id/btnShowReview"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Review All Answers"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#03A9F4"
+            app:layout_constraintTop_toBottomOf="@id/txtFeedback"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Review text - hidden until the user taps the Review button -->
+        <TextView
+            android:id="@+id/txtReview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:background="#CC141A3C"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:fontFamily="sans-serif"
+            android:textSize="14sp"
+            android:textColor="#E8E8FF"
+            android:lineSpacingMultiplier="1.4"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnShowReview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Restart sends the user back to the beginning of the quiz -->
+        <Button
+            android:id="@+id/btnRestart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Play Again"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2E7D32"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txtReview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnExit" />
+
+        <!-- Exit closes the entire app -->
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B71C1C"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txtReview"
+            app:layout_constraintStart_toEndOf="@id/btnRestart"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

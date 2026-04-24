@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/background_quiz"
+    tools:context=".MainActivity2">
+
+    <!-- Displays the current question text -->
+    <TextView
+        android:id="@+id/txtQuestions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="#CC141A3C"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:minHeight="120dp"
+        android:text="Question will appear here"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:lineSpacingMultiplier="1.3"
+        app:layout_constraintBottom_toTopOf="@id/btnFact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Fact button - user taps this if they think the statement is a real life hack -->
+    <Button
+        android:id="@+id/btnFact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fact (Life Hack)"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2E7D32"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtQuestions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnMyth"
+        app:layout_constraintBottom_toTopOf="@id/txtResult" />
+
+    <!-- Myth button - user taps this if they think the statement is an urban myth -->
+    <Button
+        android:id="@+id/btnMyth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Myth"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#B71C1C"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtQuestions"
+        app:layout_constraintStart_toEndOf="@id/btnFact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtResult" />
+
+    <!-- Shows whether the user was correct and explains the answer -->
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:background="#CC141A3C"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:minHeight="120dp"
+        android:lineSpacingMultiplier="1.3"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnFact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnNext" />
+
+    <!-- Next button becomes active after the user answers; advances to the next question -->
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#03A9F4"
+        app:layout_constraintTop_toBottomOf="@id/txtResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
