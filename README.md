@@ -6,7 +6,7 @@ A native Android app built with Kotlin in Android Studio that challenges users t
 
 ## Purpose
 
-Life hacks and internet rumours are everywhere. This app helps users test their common sense and learn useful, real-world shortcuts by presenting statements and asking: **Fact or Myth?**
+Life hacks and internet rumours are everywhere. This app helps users test their common knowledge and learn useful, real-world shortcuts by presenting statements and asking is it: **Fact or Myth?**
 
 ---
 
